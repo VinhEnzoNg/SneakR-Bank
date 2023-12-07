@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sneak_rs",
+  "info": {
+    "singularName": "sneak-r",
+    "pluralName": "sneak-rs",
+    "displayName": "SneakR",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brand": {
+      "type": "string"
+    },
+    "colorway": {
+      "type": "string"
+    },
+    "estimatedMarketValue": {
+      "type": "biginteger"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "men",
+        "women",
+        "youth",
+        "unisex",
+        "infant"
+      ]
+    },
+    "image_360": {
+      "type": "string"
+    },
+    "image_small": {
+      "type": "string"
+    },
+    "image_thumbnail": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "releaseDate": {
+      "type": "date"
+    },
+    "retailPrice": {
+      "type": "biginteger"
+    },
+    "silhouette": {
+      "type": "string"
+    }
+  }
+}

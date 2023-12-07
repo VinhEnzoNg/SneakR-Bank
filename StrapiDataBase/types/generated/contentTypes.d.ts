@@ -362,6 +362,49 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiSneakRSneakR extends Schema.CollectionType {
+  collectionName: 'sneak_rs';
+  info: {
+    singularName: 'sneak-r';
+    pluralName: 'sneak-rs';
+    displayName: 'SneakR';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand: Attribute.String;
+    colorway: Attribute.String;
+    estimatedMarketValue: Attribute.BigInteger;
+    gender: Attribute.Enumeration<
+      ['men', 'women', 'youth', 'unisex', 'infant']
+    >;
+    image_360: Attribute.String;
+    image_small: Attribute.String;
+    image_thumbnail: Attribute.String;
+    name: Attribute.String;
+    releaseDate: Attribute.Date;
+    retailPrice: Attribute.BigInteger;
+    silhouette: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sneak-r.sneak-r',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sneak-r.sneak-r',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -687,6 +730,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::sneak-r.sneak-r': ApiSneakRSneakR;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
