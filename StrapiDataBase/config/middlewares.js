@@ -8,7 +8,7 @@ module.exports = [
   {
     name: "strapi::body",
     config: {
-      jsonLimit: "100mb",
+      jsonLimit: "500mb",
     },
   },  
   "strapi::session",

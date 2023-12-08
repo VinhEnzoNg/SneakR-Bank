@@ -4,8 +4,7 @@
   "info": {
     "singularName": "sneak-r",
     "pluralName": "sneak-rs",
-    "displayName": "SneakR",
-    "description": ""
+    "displayName": "Sneak R"
   },
   "options": {
     "draftAndPublish": true
@@ -19,38 +18,16 @@
       "type": "string"
     },
     "estimatedMarketValue": {
-      "type": "biginteger"
+      "type": "float"
     },
-    "gender": {
-      "type": "enumeration",
-      "enum": [
-        "men",
-        "women",
-        "youth",
-        "unisex",
-        "infant"
-      ]
-    },
-    "image_360": {
-      "type": "string"
-    },
-    "image_small": {
-      "type": "string"
-    },
-    "image_thumbnail": {
+    "small_image_url": {
       "type": "string"
     },
     "name": {
       "type": "string"
     },
-    "releaseDate": {
-      "type": "date"
-    },
-    "retailPrice": {
+    "releaseYear": {
       "type": "biginteger"
-    },
-    "silhouette": {
-      "type": "string"
     }
   }
 }

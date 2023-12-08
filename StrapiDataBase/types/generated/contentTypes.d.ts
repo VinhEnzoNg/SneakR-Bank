@@ -367,8 +367,7 @@ export interface ApiSneakRSneakR extends Schema.CollectionType {
   info: {
     singularName: 'sneak-r';
     pluralName: 'sneak-rs';
-    displayName: 'SneakR';
-    description: '';
+    displayName: 'Sneak R';
   };
   options: {
     draftAndPublish: true;
@@ -376,17 +375,10 @@ export interface ApiSneakRSneakR extends Schema.CollectionType {
   attributes: {
     brand: Attribute.String;
     colorway: Attribute.String;
-    estimatedMarketValue: Attribute.BigInteger;
-    gender: Attribute.Enumeration<
-      ['men', 'women', 'youth', 'unisex', 'infant']
-    >;
-    image_360: Attribute.String;
-    image_small: Attribute.String;
-    image_thumbnail: Attribute.String;
+    estimatedMarketValue: Attribute.Float;
+    small_image_url: Attribute.String;
     name: Attribute.String;
-    releaseDate: Attribute.Date;
-    retailPrice: Attribute.BigInteger;
-    silhouette: Attribute.String;
+    releaseYear: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
