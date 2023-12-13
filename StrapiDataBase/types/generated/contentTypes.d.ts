@@ -370,18 +370,18 @@ export interface ApiSneakRSneakR extends Schema.CollectionType {
     displayName: 'Sneak R';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     brand: Attribute.String;
     colorway: Attribute.String;
     estimatedMarketValue: Attribute.Float;
     small_image_url: Attribute.String;
+    silhouette: Attribute.String;
     name: Attribute.String;
     releaseYear: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::sneak-r.sneak-r',
       'oneToOne',

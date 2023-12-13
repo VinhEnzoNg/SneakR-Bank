@@ -7,7 +7,7 @@
     "displayName": "Sneak R"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -21,6 +21,9 @@
       "type": "float"
     },
     "small_image_url": {
+      "type": "string"
+    },
+    "silhouette": {
       "type": "string"
     },
     "name": {
