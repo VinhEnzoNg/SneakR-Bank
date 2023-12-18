@@ -38,6 +38,12 @@
     });
     ```
 
+5. Start the development server:
+
+    ```bash
+    npm run develop
+    ```
+
 ### Strapi Plugins
 
 - **Import Export Entries:**
@@ -121,5 +127,3 @@
       },
     },
     ```
-
-Now, you have set up your Sneakers Bank website with Strapi as the backend, Nuxt.js as the frontend, and Tailwind CSS for styling. You can start building and customizing your sneaker-related content on your website!
