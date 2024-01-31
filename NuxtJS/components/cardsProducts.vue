@@ -4,7 +4,7 @@ const page = 3;
 const { data: fetchPlease, pending, error } = await useFetch( `http://localhost:1337/api/sneak-rs?pagination[page]=${page}`, {
   transform: (_fetchPlease) => _fetchPlease.data,
 });
-console.log(toRaw(fetchPlease.value)); // Log the fetched data to the console
+console.log(toRaw(fetchPlease.value)); // Enregistre les données extraites dans la console
 </script>
 
 <template>
@@ -15,13 +15,9 @@ console.log(toRaw(fetchPlease.value)); // Log the fetched data to the console
       <img :src="fetchPlease.small_image_url" alt="Sneaker Image">
       <p>Brand: {{ fetchPlease.brand }}</p>
       <p>Silhouette: {{ fetchPlease.silhouette }}</p>
-    </div>
+  </div>
 </div>
-<!-- <div>
-  <p>
-    {{ fetchPlease }}
-  </p>
-</div> -->
+
 </template>
 
 <style scoped>

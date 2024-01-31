@@ -1,16 +1,6 @@
 <template>
   <CardsProducts />
 
-  <!-- <div>
-  <p v-if="pending">Fetching... Please (._.')</p>
-  <pre v-else-if="error">Could not Sneakers: {{ error.data }}</pre>
-</div>
-<div>
-  <p>
-    {{ fetchPlease }}
-  </p>
-</div> -->
-
   <div class="p-4 flex justify-center">
     <div class="flex items-center space-x-4">
       <button @click="decrementPage" class="bg-blue-500 text-white px-4 py-2 rounded">
@@ -43,12 +33,6 @@ export default {
     }
   }
 };
-
-// const { data: fetchPlease, pending, error } = await useFetch( `http://localhost:1337/api/sneak-rs?pagination[page]=${this.pageNumber}`, {
-//   transform: (_fetchPlease) => _fetchPlease.data,
-// });
-// console.log(toRaw(fetchPlease.value)); // Log the fetched data to the console
-
 
 </script>
 
