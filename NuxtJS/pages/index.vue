@@ -1,5 +1,5 @@
 <template>
-  <CardsProducts />
+  <CardsProducts :page="pageNumber" />
 
   <div class="p-4 flex justify-center">
     <div class="flex items-center space-x-4">
@@ -15,25 +15,36 @@
 </template>
 
 <script>
-// const page = 3;
+import CardsProducts from '@/components/cardsProducts.vue';
+
 export default {
+  components: {
+    CardsProducts,
+  },
   data() {
     return {
-      pageNumber: 1
+      pageNumber: 1,
     };
   },
   methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    },
     decrementPage() {
       if (this.pageNumber > 1) {
         this.pageNumber--;
+        this.scrollToTop();
       }
     },
     incrementPage() {
       this.pageNumber++;
-    }
-  }
+      this.scrollToTop();
+    },
+  },
 };
-
 </script>
 
 <style scoped>
