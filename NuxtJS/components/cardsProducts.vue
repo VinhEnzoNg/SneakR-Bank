@@ -1,3 +1,14 @@
+<template>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+    <div v-for="sneaker in fetchPlease" :key="sneaker.id" class="card">
+      <img :src="sneaker.attributes.small_image_url" alt="Sneaker Image" class="card-image">
+      <p class="font-bold">{{ sneaker.attributes.brand }}</p>
+      <p class="text-sm">{{ sneaker.attributes.silhouette }}</p>
+      <p class="text-xs">{{ sneaker.attributes.releaseYear }}</p>
+    </div>
+  </div>
+</template>
+
 <script setup>
 import { ref, watch } from 'vue';
 import { useFetch } from '#app';  // Import correct des composables Nuxt
@@ -28,25 +39,11 @@ watch(() => props.page, (newPage) => {
 fetchData(props.page);
 </script>
 
-<template>
-  <div>
-    <p v-if="pending">Fetching... Please (._.')</p>
-    <pre v-else-if="error">Could not fetch Sneakers: {{ error.data }}</pre>
-    <div v-for="sneaker in fetchPlease" :key="sneaker.id" class="card">
-      <img :src="sneaker.attributes.small_image_url" alt="Sneaker Image" class="card-image">
-      <p>{{ sneaker.attributes.brand }}</p>
-      <p>{{ sneaker.attributes.name }}</p>
-      <p>{{ sneaker.attributes.releaseYear }}</p>
-    </div>
-  </div>
-</template>
-
 <style scoped>
 .card {
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   padding: 16px;
-  margin: 8px;
   text-align: center;
 }
 
