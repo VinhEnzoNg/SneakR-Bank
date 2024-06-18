@@ -1,6 +1,8 @@
 <template>
   <div>
-    <CardsProducts :page="pageNumber" />
+    <div class="mt-8 mx-8">
+      <CardsProducts :page="pageNumber" />
+    </div>
 
     <div class="p-4 flex justify-center">
       <div class="flex items-center space-x-4">
